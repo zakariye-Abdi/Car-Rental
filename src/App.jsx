@@ -15,34 +15,45 @@ function App() {
   return (
     <>
       {/* BrowserRouter provides routing functionality for the application */}
+      {/* This component enables the routing for the entire app */}
       <BrowserRouter>
-        {/* Routes define the available routes in the application */}
+        {/* Routes define the available routes and their components */}
+        {/* Each Route specifies a path and the component that should render when that path is matched */}
         <Routes>
-          {/* Layout component wraps all the pages and provides common structure */}
+          {/* Layout component wraps all the routes and provides a common structure like header, footer, etc. */}
+          {/* This means that Layout will be rendered for all nested routes */}
           <Route path='/' element={<Layout />}>
             
             {/* Route for the home page */}
+            {/* When the path is '/', the Home component will be rendered */}
             <Route path='/' element={<Home />} />
             
-            {/* Route for vehicle listing page */}
+            {/* Route for the vehicle listing page */}
+            {/* When the path is '/vechileListing', the VechicleListing component will be rendered */}
             <Route path='/vechileListing' element={<VechicleListing />} />
             
-            {/* Route for dealer location page */}
+            {/* Route for the dealer location page */}
+            {/* When the path is '/dealerLocation', the DealerLocation component will be rendered */}
             <Route path='/dealerLocation' element={<DealerLocation />} />
             
             {/* Route for the get app page */}
+            {/* When the path is '/getApp', the GetApp component will be rendered */}
             <Route path='/getApp' element={<GetApp />} />
             
-            {/* Route for news page */}
+            {/* Route for the news page */}
+            {/* When the path is '/ourNews', the OurNews component will be rendered */}
             <Route path='/ourNews' element={<OurNews />} />
             
-            {/* Route for contact page */}
+            {/* Route for the contact page */}
+            {/* When the path is '/contact', the Contact component will be rendered */}
             <Route path='/contact' element={<Contact />} />
             
-            {/* Route for login page */}
+            {/* Route for the login page */}
+            {/* When the path is '/loginUser', the LogInSection component will be rendered */}
             <Route path='/loginUser' element={<LogInSection />} />
             
-            {/* Route for sign-up page */}
+            {/* Route for the sign-up page */}
+            {/* When the path is '/signup', the SignUp component will be rendered */}
             <Route path='/signup' element={<SignUp />} />
             
           </Route>
