@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function FacilitiesCard({ fCardIcon, fCardTagline, fCardText }) {
   return (
@@ -31,7 +31,7 @@ function FacilitiesCard({ fCardIcon, fCardTagline, fCardText }) {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default FacilitiesCard
+export default FacilitiesCard;
