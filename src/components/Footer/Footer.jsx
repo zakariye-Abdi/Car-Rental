@@ -1,13 +1,15 @@
 import React from "react";
-import bgImg from "../Footer/Footer bg.jpeg";
-import logo from "../../assets/Logo.png";
+import bgImg from "../Footer/Footer bg.jpeg"; // Background image for the footer
+import logo from "../../assets/Logo.png"; // Logo image for the footer
 
+// Importing social media icons from react-icons library
 import { CiTwitter } from "react-icons/ci";
 import { FaPinterest } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 
+// Array of social media icons to be rendered
 const socialIcons = [
   {
     icon: <CiTwitter className="w-5 h-5" />,
@@ -15,15 +17,12 @@ const socialIcons = [
   {
     icon: <FaPinterest className="w-5 h-5" />,
   },
-
   {
     icon: <FaFacebook className="w-5 h-5" />,
   },
-
   {
     icon: <FaYoutube className="w-5 h-5" />,
   },
-
   {
     icon: <FaInstagram className="w-5 h-5" />,
   },
@@ -32,31 +31,36 @@ const socialIcons = [
 function Footer() {
   return (
     <div>
+      {/* Main footer container with responsive design adjustments */}
       <div className="footer-container w-full h-[90vh] relative overflow-hidden max-sm:min-h-[100vh]">
         <div className="w-full h-full bg-yellow-400">
+          {/* Background image for the footer */}
           <img
             src={bgImg}
             className="w-full h-full object-cover bg-no-repeat"
             alt=""
           />
 
+          {/* Overlay and content container */}
           <div className="bg-[#000000c7] w-full h-full absolute top-0 flex flex-col justify-center items-center">
+            {/* Company logo */}
             <img src={logo} alt="" className="w-20" />
 
+            {/* Showroom location text */}
             <p className="text-gray-300 text-base font-light mt-10 tracking-widest">
               : SHOWROOM LOCATION :
             </p>
             <h1 className="text-white text-base font-medium mt-2 max-sm:w-[70%] text-center">
-            Somalia , Mogadishu, Hodan, Kpp
+              Somalia, Mogadishu, Hodan, Kpp
             </h1>
 
+            {/* Company information section */}
             <div className="company-info text-white flex items-center gap-4 justify-between w-[80%] mt-20 max-lg:flex-col max-lg:gap-8">
               <p className="font-bold">
                 <span className="text-gray-300 font-medium tracking-wider">
                   PHONE:
                 </span>{" "}
                 +252611118380
-              
               </p>
               <p className="font-bold">
                 <span className="text-gray-300 font-medium tracking-wider">
@@ -67,7 +71,7 @@ function Footer() {
               <p className="font-bold">
                 <span className="text-gray-300 font-medium tracking-wider">
                   EMAIL{" "}
-                </span>{" "}
+                </span>
                 :ZakiCabdi@gmail.com
               </p>
               <p className="font-bold">
@@ -78,13 +82,22 @@ function Footer() {
               </p>
             </div>
 
+            {/* Social media icons section */}
             <div className="social-icons text-white flex items-center gap-4 mt-20">
               {socialIcons.map((item, index) => (
-                <div className="w-10 h-10 bg-transparent rounded-full border-2 border-white flex items-center justify-center  hover:bg-white hover:text-black transition-all duration-150 ease-in-out" key={index}>{item.icon}</div>
+                <div
+                  className="w-10 h-10 bg-transparent rounded-full border-2 border-white flex items-center justify-center hover:bg-white hover:text-black transition-all duration-150 ease-in-out"
+                  key={index}
+                >
+                  {item.icon}
+                </div>
               ))}
             </div>
 
-            <p className="text-white text-xs mt-20 tracking-widest max-sm:tracking-normal max-sm:text-center max-sm:w-[70%]">COPYRIGHT © 2024 AUTOZONE BEST CAR RENTAL PRICE. ALL RIGHTS RESERVED.</p>
+            {/* Footer copyright text */}
+            <p className="text-white text-xs mt-20 tracking-widest max-sm:tracking-normal max-sm:text-center max-sm:w-[70%]">
+              COPYRIGHT © 2024 AUTOZONE BEST CAR RENTAL PRICE. ALL RIGHTS RESERVED.
+            </p>
           </div>
         </div>
       </div>
