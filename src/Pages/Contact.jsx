@@ -1,16 +1,21 @@
-import React from 'react'
-import ContactHero from '../components/Contact/ContactHero'
-import ContactSection from '../components/Contact/ContactSection'
-import UpperNav from '../components/UperNav/UpperNav'
+import React from 'react';
+import ContactHero from '../components/Contact/ContactHero';
+import ContactSection from '../components/Contact/ContactSection';
+import UpperNav from '../components/UperNav/UpperNav';
 
 function Contact() {
   return (
     <>
-    <UpperNav />
-     <ContactHero /> 
-     <ContactSection />
+      {/* Upper navigation bar */}
+      <UpperNav />
+      
+      {/* Hero section for contact page */}
+      <ContactHero /> 
+      
+      {/* Main contact section with contact form and details */}
+      <ContactSection />
     </>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
